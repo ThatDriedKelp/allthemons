@@ -1,7 +1,7 @@
 function getRandomImageUrl() {
   const width = 150;
   const height = 150;
-  return `mons/${width}/${height}?random=${Math.random()}`;
+  return `assets/imagesHQ/${width}/${height}?random=${Math.random()}`;
 }
 
 function generateImages() {
