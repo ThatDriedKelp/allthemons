@@ -1,22 +1,11 @@
-function getRandomImageUrl() {
-  const width = 500;
-  const height = 500;
-  return `mons/${width}/${height}?random=${Math.random()}`;
+const img = document.getElementById("poke");
+const btn = document.getElementById("generate-btn");
+
+function generate() {
+  const index = Math.floor(Math.random() * images.length);
+  img.src = images[index];
 }
 
-function generateImages() {
-  const imagesContainer = document.getElementById("images");
-  imagesContainer.innerHTML = "";
+btn.addEventListener("click", generate);
 
-    const img = document.createElement("img");
-    img.src = getRandomImageUrl();
-    imagesContainer.appendChild(img);
-
-}
-
-document
-  .getElementById("generate-btn")
-  .addEventListener("click", generateImages);
-
-// Generate initial set of images on page load
-generateImages();
+generate();
